@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.spring.jpa.show-sql",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.spring.jpa.show-sql."
+  }
+] }

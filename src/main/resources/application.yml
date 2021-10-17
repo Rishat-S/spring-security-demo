@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
