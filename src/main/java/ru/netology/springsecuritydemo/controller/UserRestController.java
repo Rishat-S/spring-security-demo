@@ -1,9 +1,6 @@
 package ru.netology.springsecuritydemo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.netology.springsecuritydemo.entity.User;
 
 import java.util.List;
@@ -29,5 +26,16 @@ public class UserRestController {
         return users.stream()
                 .filter(user -> user.getId().equals(id))
                 .findFirst().orElse(null);
+    }
+
+    @PostMapping()
+    public User create(@RequestBody User user) {
+        this.users.add(user);
+        return user;
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Long id) {
+        this.users.removeIf(user -> user.getId().equals(id));
     }
 }
