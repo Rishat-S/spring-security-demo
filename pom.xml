@@ -42,7 +42,7 @@
         </dependency>
         <dependency>
             <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf</artifactId>
+            <artifactId>thymeleaf-spring5</artifactId>
         </dependency>
     </dependencies>
 
